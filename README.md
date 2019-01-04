@@ -35,6 +35,8 @@ iteration:20  t:14     latency  =  218 us
 ```
 
 ## 2 Setup
+
+Need to specify the nodes in 02server.yml and 03client.yaml first
 ```
 kubectl apply -f ./service
 ```
