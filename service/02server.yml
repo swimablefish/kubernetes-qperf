@@ -16,6 +16,13 @@ spec:
       labels:
         app: qperf-server
     spec:
+      tolerations:
+      - effect: NoSchedule
+        operator: Exists
+      - effect: NoExecute
+        operator: Exists
+      nodeSelector:
+        kubernetes.io/hostname: ip-10-0-23-182
       containers:
       - name: qperf
         image: danielcoman/docker-qperf:latest
