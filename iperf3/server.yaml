@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: network-test-server
+  labels:
+    app: network-test-server
+spec:
+  containers:
+    - name: ubuntu
+      ports:
+      - containerPort: 5001
+      image: ubuntu:16.04
+      command:
+        - /bin/sh
+        - -ec
+        - "sleep 100d"
