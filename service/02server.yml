@@ -22,7 +22,7 @@ spec:
       - effect: NoExecute
         operator: Exists
       nodeSelector:
-        kubernetes.io/hostname: ip-10-0-23-182
+        kubernetes.io/hostname: xxxxx
       containers:
       - name: qperf
         image: danielcoman/docker-qperf:latest
