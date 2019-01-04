@@ -16,12 +16,14 @@ spec:
       labels:
         app: qperf-client
     spec:
+      nodeSelector:
+        kubernetes.io/hostname: "xxxxxxxx"
       containers:
       - name: qperf-client
         image: danielcoman/docker-qperf:latest
         env:
         - name: SERVICE_TYPE
-          value: "ping"
+          value: "client"
         - name: SERVER_ADDR
           value: "server.qperf.svc.cluster.local"
         - name: SERVER_PORT
